@@ -238,7 +238,8 @@ public class JPML2 {
 		}
 		// 加入兒子資訊
 		for (int i = 0; i < p.sons.size(); i++)
-			r += "<is_a_relative_of ID=\"sysspbook442_person_" + p.sons.get(i).personid + "\" kinrel=\"F\" bookID=\"sysspBook442\">" + "闕"
+			if(!p.sons.get(i).conflict&&!p.sons.get(i).ancientConflict&&!p.sons.get(i).unconstructed)
+				r += "<is_a_relative_of ID=\"sysspbook442_person_" + p.sons.get(i).personid + "\" kinrel=\"F\" bookID=\"sysspBook442\">" + "闕"
 					+ p.sons.get(i).get("NAME") + "</is_a_relative_of>";
 
 		r += "</relations>" + "</person>";
