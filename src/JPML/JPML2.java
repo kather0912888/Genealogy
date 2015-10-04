@@ -243,7 +243,7 @@ public class JPML2 {
 					+ p.sons.get(i).get("NAME") + "</is_a_relative_of>";
 
 		r += "</relations>" + "</person>";
-		return r;
+		return "\n"+r;
 	}
 	
 	// 建立老婆的JPML資料
@@ -357,7 +357,7 @@ public class JPML2 {
 		}
 
 		r += "</relations>" + "</person>";
-		return r;
+		return "\n"+r;
 	}
 	
 	// 寫入錯誤資料
